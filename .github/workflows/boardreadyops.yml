@@ -1,0 +1,25 @@
+name: Fabrication readiness
+
+# The published Action, on every pull request. This repository exists so that anyone can
+# see what BoardReadyOps says about a board without installing the GitHub App first.
+#
+# The severity threshold is left at its default (high), so the check goes red exactly when
+# the board carries a blocking finding. That is the point of the demo: the red is real.
+on:
+  pull_request:
+  push:
+    branches: [main]
+
+permissions:
+  contents: read
+  pull-requests: write
+  security-events: write
+
+jobs:
+  readiness:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@de0fac2e4500dabe0009e67214ff5f5447ce83dd # v6.0.2
+      - uses: oaslananka/boardreadyops@128dabd7e291634ef1c21db982e5096639c0861e # v1.45.0
+        with:
+          config: boardreadyops.yml

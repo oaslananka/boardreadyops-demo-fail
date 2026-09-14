@@ -1,0 +1,26 @@
+# Fabrication readiness configuration for this demo board.
+version: 1
+projects:
+  - path: .
+    bom: demo-bom.csv
+rules:
+  drc.kicad:
+    enabled: false
+  erc.kicad:
+    enabled: false
+  release.changelog-present:
+    enabled: false
+  release.revision-set:
+    enabled: false
+  manufacturing.fab-notes:
+    enabled: false
+  manufacturing.package-completeness:
+    enabled: false
+  design.copper-balance:
+    enabled: false
+  design.unique-references:
+    enabled: true
+  bom.compliance:
+    enabled: true
+    require: true
+fail-on: high
