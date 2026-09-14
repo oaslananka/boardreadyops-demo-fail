@@ -31,4 +31,7 @@ shell out to `kicad-cli`, so the checks above run on the files alone.
 The companion repository [boardreadyops-demo-pass](https://github.com/oaslananka/boardreadyops-demo-pass)
 runs the same corpus the other way round — a broken board, and a pull request that fixes it.
 
-Licensed MIT, like BoardReadyOps itself. Copy the board, the config, or the workflow into your own repository.
+Licensed MIT. Copy the board, the config, or the workflow into your own project — that is what this
+repository is for. BoardReadyOps itself is licensed separately under
+[PolyForm Noncommercial](https://github.com/oaslananka/boardreadyops/blob/main/LICENSE); the MIT
+grant here covers these demo fixtures, not the tool.
